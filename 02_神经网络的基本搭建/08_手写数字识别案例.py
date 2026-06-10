@@ -22,7 +22,7 @@ def get_digit_data():
         y_test  (tensor): 测试集标签，形状 (n_test,)，取值 0~9
     """
     # 1. 从 CSV 加载原始数据集（每行一张 28×28=784 像素图片 + 1 列标签）
-    dataset = pd.read_csv("data/train.csv")
+    dataset = pd.read_csv("../data/train.csv")
 
     # 2. 分离特征矩阵 x 和标签向量 y
     x = dataset.drop("label", axis='columns')  # (n_samples, 784)  所有像素灰度值 0~255
